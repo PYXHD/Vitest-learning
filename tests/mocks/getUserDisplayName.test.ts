@@ -14,7 +14,11 @@ beforeEach(() => {
 describe("getUserDisplayName()", () => {
   test("returns user name when user is found", async () => {
     // arrange
-    mockedFetchUserById.mockResolvedValue({ id: 4, name: "Georges" });
+    mockedFetchUserById.mockResolvedValue({
+      id: 4,
+      name: "Georges",
+      isVIP: false,
+    });
 
     // act
     const result = await getUserDisplayName(4);

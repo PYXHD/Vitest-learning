@@ -1,5 +1,5 @@
 import type { User } from "./types";
 
-export async function fetchUserById(_userId: number): Promise<User | null> {
+export function getDiscountForUser(_user: User): number {
   throw new Error("Not implemented");
 }
